@@ -1,0 +1,322 @@
+---
+
+---
+
+<nav>
+  <a href="index.html" id="logo"> </a>
+  <ul class="desktop_nav">
+    <li><a href="index.html">Forside</a></li>
+    <li><a href="about.html">Om Aria</a></li>
+    <li class="dropdown">
+      Ydelser
+      <ul class="dropdown_content">
+        <li>
+          <a href="products_org.html">
+            <div class="dropdown_heading">
+              <i class="fa-regular fa-building"></i>
+              <h6>Organisationer og virksomheder</h6>
+            </div>
+            <p>Styrk din virksomheds partnerskab gennem sang.</p>
+          </a>
+        </li>
+        <li>
+          <a href="products_org.html">
+            <div class="dropdown_heading">
+              <i class="fa-solid fa-champagne-glasses"></i>
+              <h6>Privatarrangementer</h6>
+            </div>
+            <p>Få Jon ud til diverse festlige arrangementer.</p>
+          </a>
+        </li>
+        <li>
+          <a href="products_org.html">
+            <div class="dropdown_heading">
+              <i class="fa-solid fa-person-chalkboard"></i>
+              <h6>Soloundervisning</h6>
+            </div>
+            <p>Specialiseret coaching til at nå netop dine mål.</p>
+          </a>
+        </li>
+        <li>
+          <a href="products_org.html">
+            <div class="dropdown_heading">
+              <i class="fa-solid fa-people-group"></i>
+              <h6>Netkor</h6>
+            </div>
+            <p>Uforpligtende korsang for de musiklystne.</p>
+          </a>
+        </li>
+      </ul>
+      <ul class="dropdown_mobile">
+        <li>
+          <a href="products_org.html">
+            <div class="dropdown_heading">
+              <i class="fa-regular fa-building"></i>
+              <h6>Organisationer og virksomheder</h6>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="products_org.html">
+            <div class="dropdown_heading">
+              <i class="fa-solid fa-champagne-glasses"></i>
+              <h6>Privatarrangementer</h6>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="products_org.html">
+            <div class="dropdown_heading">
+              <i class="fa-solid fa-person-chalkboard"></i>
+              <h6>Soloundervisning</h6>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="products_org.html">
+            <div class="dropdown_heading">
+              <i class="fa-solid fa-people-group"></i>
+              <h6>Netkor</h6>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="contact.html" class="btn btn_nav"> Kontakt </a></li>
+  </ul>
+  <div id="mobile_nav">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</nav>
+
+<style>
+  header {
+    height: 92px;
+  }
+
+  nav {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+  }
+
+  #logo {
+    /* background-image: url(../svg/logohvidb.svg);  
+  aspect-ratio: 798.86 / 243.13; */
+    background-image: url(../svg/arialogo.svg);
+    aspect-ratio: 379.783 / 113.028;
+    background-size: 100%;
+    width: 200px;
+    background-size: cover;
+  }
+
+  .desktop_nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .desktop_nav li,
+  .desktop_nav li a {
+    font-family: "varela", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--main-text);
+    letter-spacing: 0.15rem;
+    margin: 0;
+  }
+
+  .desktop_nav li a.btn_nav {
+    color: white;
+  }
+
+  .desktop_nav > li:first-child {
+    display: none;
+  }
+
+  .dropdown {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+
+  .dropdown_content {
+    width: 350px;
+    background-color: white;
+    position: absolute;
+    left: -4rem;
+    padding: 0 1rem;
+    border: 0 solid var(--sub-color);
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      padding 0.1s,
+      max-height 0.5s,
+      border 0.5s ease-in-out;
+  }
+
+  .dropdown_content li {
+    padding: 1rem 0;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .dropdown_content li h6 {
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: var(--main-text);
+    margin-bottom: 0.15rem;
+  }
+
+  .dropdown_content li p {
+    margin-left: 2rem;
+    font-size: 1rem;
+  }
+
+  .dropdown_heading {
+    display: flex;
+    align-items: first baseline;
+    gap: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .dropdown:hover .dropdown_content {
+    display: block;
+    max-height: 550px;
+    padding: 1rem;
+    border: 1px solid var(--sub-color);
+  }
+
+  .dropdown:hover .dropdown_content li {
+    opacity: 1;
+  }
+
+  #mobile_nav {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  #mobile_nav .line {
+    width: 100%;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: var(--main-bg);
+    transition: 0.2s linear;
+    border-radius: 100px;
+  }
+
+  .dropdown_mobile {
+    display: none;
+  }
+
+  /* MOBILE */
+
+  @media (max-width: 800px) {
+    .desktop_nav {
+      display: none;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    #mobile_nav {
+      display: block;
+    }
+
+    #mobile_nav.active .line {
+      transition: 0.2s linear;
+    }
+
+    #mobile_nav.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 9.5px);
+    }
+
+    #mobile_nav.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+
+    #mobile_nav.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    #logo {
+      /* background-image: url(../svg/faviconsvg.svg);
+    aspect-ratio: 337 / 337; */
+      background-image: url(../svg/ariaicon.svg);
+      aspect-ratio: 1 / 1;
+      width: 50px;
+      background-size: cover;
+    }
+
+    nav.active .desktop_nav {
+      display: block;
+      background-color: #fff;
+      position: absolute;
+      top: 75px;
+      right: 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      padding: 1rem;
+      border-radius: 5px;
+      min-width: 280px;
+      transition: 0.5s linear;
+    }
+
+    nav.active .desktop_nav li {
+      border-bottom: 1px solid var(--sub-color);
+      padding: 0.5rem 0;
+    }
+
+    nav.active .desktop_nav li:first-child {
+      display: block;
+    }
+
+    nav.active .desktop_nav li:last-child,
+    nav.active .desktop_nav li:nth-child(4) {
+      border-bottom: 0;
+    }
+
+    nav.active .dropdown.active .dropdown_mobile {
+      display: block;
+    }
+
+    .dropdown_mobile {
+      padding: 1rem 0 0 1rem;
+      max-width: 240px;
+    }
+
+    .dropdown_mobile li {
+      padding: 0 0 0 1rem;
+    }
+
+    .dropdown_mobile li h6 {
+      font-family: "brandon-grotesque", sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+      color: var(--main-text);
+    }
+
+    nav.active .desktop_nav li:last-child {
+      text-align: center;
+    }
+
+    .dropdown:hover .dropdown_content {
+      display: none;
+    }
+  }
+</style>
