@@ -1,6 +1,8 @@
 ---
 import "../css/generel.css";
 import Navigation from "../components/Navigation.astro";
+import LogoBar from "../components/LogoBar.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="da">
@@ -9,12 +11,253 @@ import Navigation from "../components/Navigation.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
     <title>Ben</title>
   </head>
   <body>
     <header>
       <Navigation />
-      <h1>Astro</h1>
     </header>
+    <main>
+      <div id="hero">
+        <div class="hero_items">
+          <h1>OVERSKRIFT HER</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eos dolores quo autem animi nostrum voluptatibus tempore? Sunt cumque doloribus corrupti voluptatem. Quaerat eveniet neque nesciunt nostrum alias eligendi fugit!</p>
+
+          <div class="hero_btn">
+            <a href="#owner" class="btn btn_cta">Kontakt</a>
+            <a href="/about" class="btn btn_ghost">Læs mere</a>
+          </div>
+        </div>
+      </div>
+      <LogoBar />
+      <div class="max_width">
+        <div class="product_card card_pink grid_1-2">
+          <a href="products_org.html">
+            <img src="/hundedummy.jpg" alt="dummy" />
+          </a>
+          <div>
+            <a href="products_org.html">
+              <p class="tagline">Stemmer, Lederskab og Harmoni</p>
+              <h3>Organisationer og virksomheder</h3>
+              <p>Aria tilbyder specialdesignede kurser og workshops til organisationer, virksomheder og foreninger, der ønsker at styrke deres kommunikationsfærdigheder. Skab en stærkere stemme med Aria.</p>
+            </a>
+            <a href="#" class="btn">Lær mere </a>
+          </div>
+        </div>
+        <div class="product_card card_blue grid_2-1">
+          <a href="products_org.html" class="order">
+            <img src="/tykhund.jpg" alt="dummy" />
+          </a>
+          <div>
+            <a href="products_org.html">
+              <p class="tagline">Intime stemmerejser</p>
+              <h3>Privatarrangementer</h3>
+              <p>Oplev en fælles tilgang til harmonisering af stemme og krop hos Aria. Vi integrerer terapeutisk vejledning baseret på VoiceEmbodiments og Alexanderteknikken for en dybdegående og transformativ oplevelse.</p>
+            </a>
+            <a href="#" class="btn">Lær mere </a>
+          </div>
+        </div>
+        <div class="product_card card_pink grid_1-2">
+          <a href="products_org.html"> <img class="order" src="dummyhundigen.jpeg" alt="dummy" /></a>
+          <div>
+            <a href="products_org.html">
+              <p class="tagline">Skab din unikke lyd</p>
+              <h3>Soloundervisning</h3>
+              <p>Tag dine sangevner til det næste niveau med privat sangundervisning hos Aria. Jon Hollesen guider dig gennem teknikker og metoder til at optimere din performance.</p>
+            </a>
+            <a href="#" class="btn">Lær mere</a>
+          </div>
+        </div>
+        <div id="owner" class="grid_1-1">
+          <img src="/tykhund.jpg" alt="dummy" class="order" />
+          <div>
+            <h2>Jon Hollesen har arbejdet med stemmecoaching i 25 år</h2>
+            <p>Jon Hollesen, ejer og coach hos Aria, er en erfaren musikvidenskabsmand og sangpædagog. Med en passion for stemmen og stor erfaring i workshops for internationale firmaer, deler Jon sin ekspertise og kærlighed til sang i hver lektion.</p>
+            <a href="about.html" class="btn btn_owner"> Læs mere </a>
+          </div>
+          <div class="info_box">
+            <p>Jon Hollesen er stemmeeksperten, der guider dig gennem hver undervisningssession med kærlighed og passion.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
   </body>
+
+  <style>
+    /*---- HERO -----*/
+    #hero {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      grid-template-rows: 1fr 2fr 1fr;
+      height: 100vh;
+      background-image: url("/dummyhund.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 30%;
+      background-attachment: fixed;
+    }
+
+    .hero_items {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+
+    .hero_items p {
+      max-width: 65ch;
+    }
+
+    .hero_btn {
+      display: flex;
+      justify-self: start;
+      gap: 20px;
+      margin-top: 2rem;
+    }
+
+    .btn_cta {
+      background-color: white;
+    }
+
+    .btn_ghost {
+      border: 1px solid;
+    }
+
+    /*----- PRODUCT CARDS ------*/
+
+    .order {
+      order: 1;
+    }
+    .card_pink {
+      background-color: #e5978a;
+    }
+
+    .card_blue {
+      background-color: #005185;
+    }
+
+    .product_card div:last-child {
+      padding: 2rem;
+    }
+
+    .product_card img {
+      max-width: 500px;
+    }
+
+    .product_card div {
+      align-self: center;
+    }
+
+    .product_card h3,
+    .product_card p,
+    .product_card a {
+      color: white;
+    }
+
+    .product_card {
+      margin-bottom: 3rem;
+    }
+
+    .card_blue {
+      margin-left: auto;
+    }
+
+    #owner:hover .info_box {
+      left: 27%;
+      bottom: -1rem;
+    }
+
+    #owner {
+      background-color: #f2e1cf;
+      position: relative;
+    }
+
+    #owner img {
+      height: 500px;
+      object-fit: cover;
+      border-radius: 5px 5px 0 0;
+    }
+
+    #owner > div {
+      padding: 2rem;
+      margin: 0;
+    }
+
+    #owner h2 {
+      color: black;
+      font-size: 1.5rem;
+    }
+
+    #owner .info_box {
+      background-color: #005185;
+      padding: 1.5rem;
+      border-radius: 0 0 5px 5px;
+    }
+
+    @media (min-width: 800px) {
+      .grid_1-2 {
+        display: grid;
+        grid-template-columns: 4fr 5fr;
+        gap: 0.5rem;
+      }
+
+      .grid_2-1 {
+        display: grid;
+        grid-template-columns: 5fr 4fr;
+        gap: 0.5rem;
+      }
+
+      .grid_1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      .card_pink::after {
+        display: block;
+        content: "";
+        width: 75%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        box-shadow: 30px 15px 1px #77b6ea;
+        border-radius: 5px;
+        z-index: -1;
+      }
+
+      .card_blue::after {
+        content: "";
+        width: 75%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        box-shadow: -30px 15px 1px #f2e1cf;
+        border-radius: 5px;
+        z-index: -1;
+      }
+
+      #owner .info_box {
+        position: absolute;
+        bottom: -1.5rem;
+        left: 25%;
+        width: 450px;
+        border-radius: 0;
+        transition: all 0.5s;
+      }
+
+      .product_card {
+        max-width: 1000px;
+        max-height: 500px;
+        position: relative;
+        transition: 0.25s;
+        margin-bottom: 3rem;
+      }
+    }
+  </style>
 </html>

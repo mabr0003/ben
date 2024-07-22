@@ -3,87 +3,11 @@
 ---
 
 <nav>
-  <a href="index.html" id="logo"> </a>
+  <a href="index.html" id="logo"></a>
   <ul class="desktop_nav">
-    <li><a href="index.html">Forside</a></li>
-    <li><a href="about.html">Om Aria</a></li>
-    <li class="dropdown">
-      Ydelser
-      <ul class="dropdown_content">
-        <li>
-          <a href="products_org.html">
-            <div class="dropdown_heading">
-              <i class="fa-regular fa-building"></i>
-              <h6>Organisationer og virksomheder</h6>
-            </div>
-            <p>Styrk din virksomheds partnerskab gennem sang.</p>
-          </a>
-        </li>
-        <li>
-          <a href="products_org.html">
-            <div class="dropdown_heading">
-              <i class="fa-solid fa-champagne-glasses"></i>
-              <h6>Privatarrangementer</h6>
-            </div>
-            <p>Få Jon ud til diverse festlige arrangementer.</p>
-          </a>
-        </li>
-        <li>
-          <a href="products_org.html">
-            <div class="dropdown_heading">
-              <i class="fa-solid fa-person-chalkboard"></i>
-              <h6>Soloundervisning</h6>
-            </div>
-            <p>Specialiseret coaching til at nå netop dine mål.</p>
-          </a>
-        </li>
-        <li>
-          <a href="products_org.html">
-            <div class="dropdown_heading">
-              <i class="fa-solid fa-people-group"></i>
-              <h6>Netkor</h6>
-            </div>
-            <p>Uforpligtende korsang for de musiklystne.</p>
-          </a>
-        </li>
-      </ul>
-      <ul class="dropdown_mobile">
-        <li>
-          <a href="products_org.html">
-            <div class="dropdown_heading">
-              <i class="fa-regular fa-building"></i>
-              <h6>Organisationer og virksomheder</h6>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="products_org.html">
-            <div class="dropdown_heading">
-              <i class="fa-solid fa-champagne-glasses"></i>
-              <h6>Privatarrangementer</h6>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="products_org.html">
-            <div class="dropdown_heading">
-              <i class="fa-solid fa-person-chalkboard"></i>
-              <h6>Soloundervisning</h6>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="products_org.html">
-            <div class="dropdown_heading">
-              <i class="fa-solid fa-people-group"></i>
-              <h6>Netkor</h6>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li><a href="events.html">Events</a></li>
-    <li><a href="contact.html" class="btn btn_nav"> Kontakt </a></li>
+    <li><a href="/">Forside</a></li>
+    <li><a href="/about">Om Aria</a></li>
+    <li><a href="/#owner" class="btn btn_nav"> Kontakt </a></li>
   </ul>
   <div id="mobile_nav">
     <div class="line"></div>
@@ -98,7 +22,6 @@
   }
 
   nav {
-    position: fixed;
     width: 100%;
     background-color: white;
     display: flex;
@@ -109,8 +32,6 @@
   }
 
   #logo {
-    /* background-image: url(../svg/logohvidb.svg);  
-  aspect-ratio: 798.86 / 243.13; */
     background-image: url(../svg/arialogo.svg);
     aspect-ratio: 379.783 / 113.028;
     background-size: 100%;
@@ -120,7 +41,6 @@
 
   .desktop_nav {
     display: flex;
-    justify-content: end;
     align-items: center;
     gap: 4rem;
   }
@@ -139,70 +59,6 @@
     color: white;
   }
 
-  .desktop_nav > li:first-child {
-    display: none;
-  }
-
-  .dropdown {
-    position: relative;
-    display: block;
-    cursor: pointer;
-  }
-
-  .dropdown_content {
-    width: 350px;
-    background-color: white;
-    position: absolute;
-    left: -4rem;
-    padding: 0 1rem;
-    border: 0 solid var(--sub-color);
-    border-radius: 5px;
-    max-height: 0;
-    overflow: hidden;
-    transition:
-      padding 0.1s,
-      max-height 0.5s,
-      border 0.5s ease-in-out;
-  }
-
-  .dropdown_content li {
-    padding: 1rem 0;
-    opacity: 0;
-    transition: opacity 1s;
-  }
-
-  .dropdown_content li h6 {
-    font-family: "brandon-grotesque", sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    letter-spacing: 0.1rem;
-    color: var(--main-text);
-    margin-bottom: 0.15rem;
-  }
-
-  .dropdown_content li p {
-    margin-left: 2rem;
-    font-size: 1rem;
-  }
-
-  .dropdown_heading {
-    display: flex;
-    align-items: first baseline;
-    gap: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .dropdown:hover .dropdown_content {
-    display: block;
-    max-height: 550px;
-    padding: 1rem;
-    border: 1px solid var(--sub-color);
-  }
-
-  .dropdown:hover .dropdown_content li {
-    opacity: 1;
-  }
-
   #mobile_nav {
     display: none;
     width: 30px;
@@ -213,7 +69,7 @@
     width: 100%;
     height: 5px;
     margin-bottom: 5px;
-    background-color: var(--main-bg);
+    background-color: var(--contrast-color);
     transition: 0.2s linear;
     border-radius: 100px;
   }
@@ -226,10 +82,6 @@
 
   @media (max-width: 800px) {
     .desktop_nav {
-      display: none;
-    }
-
-    .hide {
       display: none;
     }
 
@@ -291,26 +143,6 @@
       border-bottom: 0;
     }
 
-    nav.active .dropdown.active .dropdown_mobile {
-      display: block;
-    }
-
-    .dropdown_mobile {
-      padding: 1rem 0 0 1rem;
-      max-width: 240px;
-    }
-
-    .dropdown_mobile li {
-      padding: 0 0 0 1rem;
-    }
-
-    .dropdown_mobile li h6 {
-      font-family: "brandon-grotesque", sans-serif;
-      font-size: 1rem;
-      letter-spacing: 0.1rem;
-      color: var(--main-text);
-    }
-
     nav.active .desktop_nav li:last-child {
       text-align: center;
     }
@@ -320,3 +152,19 @@
     }
   }
 </style>
+
+<script>
+  const burger = document.querySelector("#mobile_nav");
+  const nav = document.querySelector("nav");
+  const dropdown = document.querySelector(".dropdown");
+
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
+    dropdown.classList.remove("active");
+  });
+
+  dropdown.addEventListener("click", () => {
+    dropdown.classList.toggle("active");
+  });
+</script>

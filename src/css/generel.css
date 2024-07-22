@@ -14,7 +14,44 @@ img {
   height: auto;
   width: 100%;
   object-fit: cover;
-  border-radius: 15px;
+}
+
+.max_width {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3 {
+  font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
 }
 
 :root {
@@ -25,4 +62,30 @@ img {
 
 body {
   background-color: var(--primary-background-color);
+}
+
+/*------ BUTTON -------*/
+
+.btn {
+  font-family: "varela", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: 150px;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+  display: inline-block;
+  transition: scale 0.25s;
+}
+
+.btn:hover {
+  scale: 1.05;
+}
+
+.btn_nav {
+  font-family: "brandon-grotesque", sans-serif;
+  background-color: var(--contrast-color);
+  border-radius: 0;
+  text-transform: uppercase;
+  color: white;
 }

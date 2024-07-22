@@ -1,0 +1,148 @@
+---
+import "../css/generel.css";
+import Navigation from "../components/Navigation.astro";
+import LogoBar from "../components/LogoBar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+    <title>Om os</title>
+  </head>
+  <body>
+    <header>
+      <Navigation />
+    </header>
+    <main>
+      <div id="owner_profile" class="grid_1-1 breakout_container">
+        <div><img src="/dummyhund.jpg" alt="Jon Hollesen" /></div>
+        <div>
+          <h1>Jon Hollesen</h1>
+          <p>Mød Jon Hollesen, visionæren bag Aria og dedikeret stemmeekspert.</p>
+          <p>Med en cand.mag. i musikvidenskab og dramaturgi fra Aarhus Universitet, samt en uddannelse som sang&shy;pædagog fra Det Kgl. Danske Musikkonservatorium, er Jon en solid fagperson inden for stemmetræning.</p>
+          <p>Jon's ekspertise omfatter privatundervisning, work&shy;shops og seminarer. Med et imponerende resumé, har Jon faciliteret kurser for store internationale virksomheder som Nestlé Professional og Center for Ledelse, og undervist på lederkurser for det danske forsvar og Dansk Yogaforbund.</p>
+        </div>
+      </div>
+      <div id="aria_profile" class="grid_4-1-2">
+        <div>
+          <h1>Aria</h1>
+          <p>Velkommen til Aria — skolen for sang og stemmebrug, hvor lyden af potentiale møder ekspertise.</p>
+          <p>Aria er dedikeret til at forme stemmer gennem specialiserede kurser og vejledning. Vi tror på, at hver stemme fortjener at blive hørt, og vores kurser stræber efter at frigøre det fulde potentiale i hver enkelt deltager.</p>
+        </div>
+        <div>
+          <img src="/hundedummy.jpg" alt="dummy" />
+          <img src="tykhund.jpg" alt="dummy" />
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1.5rem;
+  }
+
+  #owner_profile {
+    border-radius: 5px;
+    margin-bottom: 3rem;
+  }
+
+  #owner_profile > div:last-child {
+    padding: 2rem;
+    padding-left: 0;
+  }
+
+  #owner_profile h1 {
+    color: black;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+  }
+
+  #aria_profile {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  #aria_profile .grid_2-1 {
+    grid-row: 1/3 span;
+  }
+
+  #aria_profile > div:last-child {
+    grid-column: 2/3 span;
+    grid-row: 1;
+  }
+
+  #aria_profile h1,
+  #aria_profile p {
+    color: white;
+    max-width: 80%;
+    margin-top: 0;
+  }
+
+  #aria_profile img {
+    border: 2px solid white;
+    max-height: 150px;
+    object-fit: cover;
+    margin: 0.75rem 0 0.5rem;
+  }
+
+  #aria_profile > div:first-child {
+    background-color: #e5978a;
+    padding: 2rem;
+  }
+  #aria_profile img:first-child {
+    object-position: 50% 40%;
+  }
+  #aria_profile img:last-child {
+    margin: 0;
+  }
+
+  @media (min-width: 800px) {
+    .grid_4-1-2 {
+      display: grid;
+      grid-template-columns: 4fr 1fr 2fr;
+      gap: 1rem;
+    }
+
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    #owner_profile img {
+      position: absolute;
+      top: 1.5rem;
+      left: 3rem;
+      max-width: 400px;
+      border-radius: 5px;
+      border: 2px solid white;
+    }
+
+    #owner_profile > div:first-child {
+      position: relative;
+      width: 450px;
+    }
+    #aria_profile > div:first-child {
+      background-color: #e5978a;
+      padding: 4rem;
+      border-radius: 5px;
+      grid-column: 1/2 span;
+      grid-row: 1;
+      box-shadow: 30px 15px 0 #77b6ea;
+    }
+  }
+</style>
