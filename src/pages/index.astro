@@ -1,8 +1,10 @@
 ---
 import "../css/generel.css";
+import "../css/animation.css";
 import Navigation from "../components/Navigation.astro";
 import LogoBar from "../components/LogoBar.astro";
 import Footer from "../components/Footer.astro";
+import Kontakt from "../components/kontakt.astro";
 ---
 
 <html lang="da">
@@ -26,7 +28,7 @@ import Footer from "../components/Footer.astro";
     <main>
       <div id="hero">
         <div class="hero_items">
-          <h1>OVERSKRIFT HER</h1>
+          <h1>OVERSKFIFT HER</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eos dolores quo autem animi nostrum voluptatibus tempore? Sunt cumque doloribus corrupti voluptatem. Quaerat eveniet neque nesciunt nostrum alias eligendi fugit!</p>
 
           <div class="hero_btn">
@@ -36,10 +38,21 @@ import Footer from "../components/Footer.astro";
         </div>
       </div>
       <LogoBar />
+
       <div class="max_width">
-        <div class="product_card card_pink grid_1-2">
+        <div id="ordrerproces">
+          <!-- <img src="/16.JPG" alt="dummy" class="order" /> -->
+
+          <div>
+            <h2>SÅDAN GØR DU</h2>
+
+            <p>Jon Hollesen, ejer og coach hos Aria, er en erfaren musikvidenskabsmand og sangpædagog. Med en passion for stemmen og stor erfaring i workshops for internationale firmaer, deler Jon sin ekspertise og kærlighed til sang i hver lektion.</p>
+            <a href="about.html" class="btn btn_owner"> Læs mere </a>
+          </div>
+        </div>
+        <div class="product_card card_pink grid_1-2 scroll_animation">
           <a href="products_org.html">
-            <img src="/hundedummy.jpg" alt="dummy" />
+            <img src="/12.JPG" alt="dummy" />
           </a>
           <div>
             <a href="products_org.html">
@@ -50,9 +63,9 @@ import Footer from "../components/Footer.astro";
             <a href="#" class="btn">Lær mere </a>
           </div>
         </div>
-        <div class="product_card card_blue grid_2-1">
+        <div class="product_card card_blue grid_2-1 scroll_animation_2">
           <a href="products_org.html" class="order">
-            <img src="/tykhund.jpg" alt="dummy" />
+            <img src="/8.JPG" alt="dummy" />
           </a>
           <div>
             <a href="products_org.html">
@@ -63,8 +76,8 @@ import Footer from "../components/Footer.astro";
             <a href="#" class="btn">Lær mere </a>
           </div>
         </div>
-        <div class="product_card card_pink grid_1-2">
-          <a href="products_org.html"> <img class="order" src="dummyhundigen.jpeg" alt="dummy" /></a>
+        <div class="product_card card_pink grid_1-2 scroll_animation">
+          <a href="products_org.html"> <img class="order" src="/3.JPG" alt="dummy" /></a>
           <div>
             <a href="products_org.html">
               <p class="tagline">Skab din unikke lyd</p>
@@ -74,8 +87,22 @@ import Footer from "../components/Footer.astro";
             <a href="#" class="btn">Lær mere</a>
           </div>
         </div>
+        <div class="product_card card_blue grid_2-1 scroll_animation_2">
+          <a href="products_org.html" class="order">
+            <img src="/8.JPG" alt="dummy" />
+          </a>
+          <div>
+            <a href="products_org.html">
+              <p class="tagline">Intime stemmerejser</p>
+              <h3>Privatarrangementer</h3>
+              <p>Oplev en fælles tilgang til harmonisering af stemme og krop hos Aria. Vi integrerer terapeutisk vejledning baseret på VoiceEmbodiments og Alexanderteknikken for en dybdegående og transformativ oplevelse.</p>
+            </a>
+            <a href="#" class="btn">Lær mere </a>
+          </div>
+        </div>
+
         <div id="owner" class="grid_1-1">
-          <img src="/tykhund.jpg" alt="dummy" class="order" />
+          <img src="/16.JPG" alt="dummy" class="order" />
           <div>
             <h2>Jon Hollesen har arbejdet med stemmecoaching i 25 år</h2>
             <p>Jon Hollesen, ejer og coach hos Aria, er en erfaren musikvidenskabsmand og sangpædagog. Med en passion for stemmen og stor erfaring i workshops for internationale firmaer, deler Jon sin ekspertise og kærlighed til sang i hver lektion.</p>
@@ -88,6 +115,7 @@ import Footer from "../components/Footer.astro";
       </div>
     </main>
     <Footer />
+    <script src="../js/scrolleffect.js"></script>
   </body>
 
   <style>
@@ -97,7 +125,7 @@ import Footer from "../components/Footer.astro";
       grid-template-columns: 1fr 4fr;
       grid-template-rows: 1fr 2fr 1fr;
       height: 100vh;
-      background-image: url("/dummyhund.jpg");
+      background-image: url("/20.JPG");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: 30%;
@@ -110,7 +138,7 @@ import Footer from "../components/Footer.astro";
     }
 
     .hero_items p {
-      max-width: 65ch;
+      max-width: 40ch;
     }
 
     .hero_btn {
@@ -120,25 +148,17 @@ import Footer from "../components/Footer.astro";
       margin-top: 2rem;
     }
 
-    .btn_cta {
-      background-color: white;
-    }
-
-    .btn_ghost {
-      border: 1px solid;
-    }
-
     /*----- PRODUCT CARDS ------*/
 
     .order {
       order: 1;
     }
     .card_pink {
-      background-color: #e5978a;
+      background-color: var(--color-one);
     }
 
     .card_blue {
-      background-color: #005185;
+      background-color: var(--color-two);
     }
 
     .product_card div:last-child {
@@ -173,30 +193,46 @@ import Footer from "../components/Footer.astro";
     }
 
     #owner {
-      background-color: #f2e1cf;
       position: relative;
+      margin-top: 8rem;
+      background-color: var(--color-one);
+      color: whitesmoke;
     }
 
     #owner img {
-      height: 500px;
       object-fit: cover;
-      border-radius: 5px 5px 0 0;
     }
 
     #owner > div {
       padding: 2rem;
       margin: 0;
-    }
-
-    #owner h2 {
-      color: black;
-      font-size: 1.5rem;
+      align-self: center;
     }
 
     #owner .info_box {
-      background-color: #005185;
+      background-color: var(--color-three);
       padding: 1.5rem;
       border-radius: 0 0 5px 5px;
+      color: var(--color-one);
+    }
+
+    #ordrerproces {
+      position: relative;
+      margin: 5rem auto;
+      background-color: var(--color-two);
+      color: whitesmoke;
+
+      max-width: 65ch;
+    }
+
+    #ordrerproces img {
+      object-fit: cover;
+    }
+
+    #ordrerproces > div {
+      padding: 2rem;
+      margin: 0;
+      align-self: center;
     }
 
     @media (min-width: 800px) {
@@ -225,8 +261,8 @@ import Footer from "../components/Footer.astro";
         position: absolute;
         right: 0;
         bottom: 0;
-        box-shadow: 30px 15px 1px #77b6ea;
-        border-radius: 5px;
+        box-shadow: 30px 15px 1px var(--color-three);
+
         z-index: -1;
       }
 
@@ -237,8 +273,8 @@ import Footer from "../components/Footer.astro";
         position: absolute;
         left: 0;
         bottom: 0;
-        box-shadow: -30px 15px 1px #f2e1cf;
-        border-radius: 5px;
+        box-shadow: -30px 15px 1px var(--color-four);
+
         z-index: -1;
       }
 

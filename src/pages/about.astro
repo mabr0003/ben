@@ -1,5 +1,6 @@
 ---
 import "../css/generel.css";
+import "../css/animation.css";
 import Navigation from "../components/Navigation.astro";
 import LogoBar from "../components/LogoBar.astro";
 import Footer from "../components/Footer.astro";
@@ -24,7 +25,7 @@ import Footer from "../components/Footer.astro";
       <Navigation />
     </header>
     <main>
-      <div id="owner_profile" class="grid_1-1 breakout_container">
+      <div id="owner_profile" class="grid_1-1">
         <div><img src="/dummyhund.jpg" alt="Jon Hollesen" /></div>
         <div>
           <h1>Jon Hollesen</h1>
@@ -44,8 +45,30 @@ import Footer from "../components/Footer.astro";
           <img src="tykhund.jpg" alt="dummy" />
         </div>
       </div>
+      <div class="grid_1-1 artikelgrid">
+        <div class="artikel1 artikel scroll_animation">
+          <h1 class="about_h1">LOREM IPSUM</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque
+            reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta.
+          </p>
+        </div>
+        <div class="artikel2 artikel scroll_animation_2">
+          <h1 class="about_h1">LOREM IPSUM</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta.</p>
+        </div>
+        <div class="artikel3 artikel scroll_animation">
+          <h1 class="about_h1">LOREM IPSUM</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta.</p>
+        </div>
+        <div class="artikel4 artikel scroll_animation_2">
+          <h1 class="about_h1">LOREM IPSUM</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta.</p>
+        </div>
+      </div>
     </main>
     <Footer />
+    <script src="../js/scrolleffect.js"></script>
   </body>
 </html>
 
@@ -101,7 +124,7 @@ import Footer from "../components/Footer.astro";
   }
 
   #aria_profile > div:first-child {
-    background-color: #e5978a;
+    background-color: var(--color-two);
     padding: 2rem;
   }
   #aria_profile img:first-child {
@@ -111,6 +134,40 @@ import Footer from "../components/Footer.astro";
     margin: 0;
   }
 
+  .artikelgrid {
+    margin-top: 5rem;
+  }
+
+  .artikel {
+    color: whitesmoke;
+    padding: 2rem;
+    line-height: 25px;
+    margin-bottom: 2rem;
+  }
+
+  .artikel h1 {
+    margin-bottom: 2rem;
+  }
+
+  .artikel1 {
+    background-color: var(--color-one);
+  }
+  .artikel2 {
+    background-color: var(--color-two);
+    text-align: right;
+  }
+  .artikel2 h1 {
+    text-align: right;
+  }
+  .artikel3 {
+    background-color: var(--color-one);
+  }
+  .artikel4 {
+    background-color: var(--color-two);
+  }
+  .artikel4 h1 {
+    text-align: right;
+  }
   @media (min-width: 800px) {
     .grid_4-1-2 {
       display: grid;
@@ -137,12 +194,33 @@ import Footer from "../components/Footer.astro";
       width: 450px;
     }
     #aria_profile > div:first-child {
-      background-color: #e5978a;
+      background-color: var(--color-two);
       padding: 4rem;
-      border-radius: 5px;
+
       grid-column: 1/2 span;
       grid-row: 1;
-      box-shadow: 30px 15px 0 #77b6ea;
+      box-shadow: 30px 15px 0 var(--color-four);
+    }
+
+    .artikel1 {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      box-shadow: 30px 15px 1px var(--color-three);
+    }
+    .artikel2 {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      box-shadow: -30px 15px 1px var(--color-four);
+    }
+    .artikel3 {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      box-shadow: 30px 15px 1px var(--color-three);
+    }
+    .artikel4 {
+      grid-column: 2/3;
+      grid-row: 4/5;
+      box-shadow: -30px 15px 1px var(--color-four);
     }
   }
 </style>

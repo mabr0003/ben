@@ -1,0 +1,30 @@
+.scoot_in {
+  animation-name: scoot_in_kf;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes scoot_in_kf {
+  from {
+    transform: translateX(-50px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.scoot_in_2 {
+  animation-name: scoot_in2_kf;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes scoot_in2_kf {
+  from {
+    transform: translateX(50px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
