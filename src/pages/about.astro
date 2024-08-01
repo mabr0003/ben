@@ -9,7 +9,7 @@ import Footer from "../components/Footer.astro";
 <html lang="da">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/splogomobil1.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,70 +18,111 @@ import Footer from "../components/Footer.astro";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
-    <title>Om os</title>
+    <title>Om</title>
   </head>
   <body>
     <header>
       <Navigation />
     </header>
     <main>
-      <div id="owner_profile" class="grid_1-1">
-        <div><img src="/dummyhund.jpg" alt="Jon Hollesen" /></div>
+      <div id="hero">
         <div>
-          <h1>Jon Hollesen</h1>
-          <p>Mød Jon Hollesen, visionæren bag Aria og dedikeret stemmeekspert.</p>
-          <p>Med en cand.mag. i musikvidenskab og dramaturgi fra Aarhus Universitet, samt en uddannelse som sang&shy;pædagog fra Det Kgl. Danske Musikkonservatorium, er Jon en solid fagperson inden for stemmetræning.</p>
-          <p>Jon's ekspertise omfatter privatundervisning, work&shy;shops og seminarer. Med et imponerende resumé, har Jon faciliteret kurser for store internationale virksomheder som Nestlé Professional og Center for Ledelse, og undervist på lederkurser for det danske forsvar og Dansk Yogaforbund.</p>
+          <h1>Læs mere om sandwichpaneler her!</h1>
+          <p>Sandwichpaneler findes som væg og tag-elementer i mange forskellige typer og farver.</p>
         </div>
       </div>
-      <div id="aria_profile" class="grid_4-1-2">
-        <div>
-          <h1>Aria</h1>
-          <p>Velkommen til Aria — skolen for sang og stemmebrug, hvor lyden af potentiale møder ekspertise.</p>
-          <p>Aria er dedikeret til at forme stemmer gennem specialiserede kurser og vejledning. Vi tror på, at hver stemme fortjener at blive hørt, og vores kurser stræber efter at frigøre det fulde potentiale i hver enkelt deltager.</p>
+      <LogoBar />
+      <div class="max_width">
+        <div id="owner_profile" class="grid_1-1">
+          <div><img src="/0.png" alt="" /></div>
+          <div>
+            <h2>ORDRERPROCES</h2>
+            <p>Ring på nedenstående nummer - eller endnu bedre send en mail med en kort beskrivelse af det projekt, du overvejer at bruge sandwichpaneler til. Hvis du har en eksisterende hal som du overvejer at give nye vægge og/eller tag er det bedst med nogle tegninger, men hvis bare vi får en adresse kan vi ofte finde information fra luftfoto og det lokale byggesagsarkiv. Billeder kan også være en stor hjælp.</p>
+          </div>
         </div>
-        <div>
-          <img src="/hundedummy.jpg" alt="dummy" />
-          <img src="tykhund.jpg" alt="dummy" />
+        <div id="aria_profile" class="grid_4-1-2">
+          <div>
+            <h2>KONTAKT HER!</h2>
+            <ul>
+              <li><p>Telefon:</p><a href="tel:+45 40 27 08 97"><p>+45 40 27 08 97</p></a></li>
+              <li><p>Email:</p> <a href="mailto:benbarkerdk@gmail.com"><p>benbarkerdk@gmail.com</p></a></li>
+            </ul>
+          </div>
+          <div>
+            <img src="/0.jpeg" alt="dummy" />
+            <img src="/1.jpeg" alt="dummy" />
+          </div>
         </div>
-      </div>
-      <div class="grid_1-1 artikelgrid">
-        <div class="artikel1 artikel scroll_animation">
-          <h1 class="about_h1">LOREM IPSUM</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque
-            reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta.
-          </p>
-        </div>
-        <div class="artikel2 artikel scroll_animation_2">
+        <div class="grid_1-1 artikelgrid">
+          <div class="artikel1 artikel scroll_animation" id="fordele">
+            <h1 class="about_h1">Fordele ved PIR sandwichpaneler</h1>
+            <h3>Hurtig byggeproces!</h3>
+            <p>Om det drejer sig om tag eller facade, så er byggeri med sandwichpaneler en super hurtig byggeproces. De store lette paneler monteres med få specialskruer, hvorefter de udgør en færdig bygningsdel med smukke, vedligeholdelsesfrie overflader, som ikke kræver yderligere beklædning eller maling. Selv hvis det regner undervejs i byggeprocessen er der ingen risiko for råd eller svamp eller at noget vrider sig.</p>
+            <h3>Samme isolering - halv vægtykkelse!</h3>
+            <p>PIR’s isoleringsevne er dobbelt så god som mineraluld! Hvis eksempelvis en ydervæg skal have en U-værdi på 0,14, vil en konstruktion som let skillevæg med mineraluld have en samlet tykkelse på ca. 34 cm, hvoraf 28,5 er isolering. Et sandwichpanel med PIR kerne og samme U-værdi har en tykkelse på kun 16 cm. Altså samme isolering på den halve vægtykkelse!</p>
+            <h3>Fantastisk indeklima!</h3>
+            <p>En hal, beklædt med 120mm PIR sandwichplader vil typisk være frostfri om vinteren og virke sval og kølig på varme sommerdage. Kondens kan ikke forekomme!</p>
+            <h3>Højisolerede PIR sandwichpaneler vejer det samme som eternit!</h3>
+            <p>Hvis man ejer en bygning som oprindeligt er udført med eternittag, kan udskiftning til sandwichpaneler i PIR være et meget attraktivt alternativ. Ikke blot opnår man et smukt, vedligeholdelsesfrit, holdbart, højisoleret og absolut kondensfrit tag, men vægten pr kvadratmeter er den samme som for eternit, hvilket betyder at man ikke behøver at forstærke konstruktionen eller gøre rede for at tagkonstruktionen kan bære den nye belægning!</p>
+            <h3>Brandsikkerhed</h3>
+            <p>Vi sælger kun sandwichpaneler med den højest opnåelige brandklasse. For elementer med PIR kerne er dette ”B-s1,d0” som betyder at materialet har meget begrænset bidrag til brand, ingen overtænding, meget begrænset røgudvikling og ingen brændende dråber. Efter det gamle danske klassifikationssystem er der tale om et ”Klasse A materiale”. Sandwichpaneler med kerne i mineraluld har endnu bedre brandegenskaber, men i langt de fleste tilfælde er vores PIR elementer fuldt tilstrækkelige. Bemærk at regler omkring brand er omfattende og komplicerede! Vi anbefaler stærkt at du tilknytter en brandrådgiver.</p>
+          </div>
+          <div class="artikel2 artikel scroll_animation_2" id="mineraluld">
+            <h1 class="about_h1">PIR eller Mineraluld</h1>
+            <p>
+              Sandwichpaneler med kerne af mineraluld Generelt er vores sandwichpaneler med kerne af mineraluld klassificeret som A2-s1, d0 (”ubrændbart”) samt ”EI-60” eller bedre, og dermed opfylder langt de fleste almindeligt forekommende brandkrav til både tag og ydervægge i alle bygningstyper. Nogle paneler har en ringere klassifikation for tykkelser under 150mm, men vi anbefaler under alle omstændigheder at man vælger en kernetykkelse på mindst 150mm af hensyn til isoleringsværdien. Sandwichpaneler med kerne af PIR Vi fører kun PIR-paneler som er certificeret som B-s1, d0, hvilket svarer til den tidligere danske ”klasse A”, som er den næsthøjest opnåelige brandklasse. Ofte er sandwichpaneler med kerne i PIR mere attraktive and mineraluld fordi de er billigere, isolerer meget bedre og
+              vejer mindre. Det med vægten kan eksempelvis være afgørende hvis man på en eksisterende hal vil udskifte et gammelt eternittag med et nyt, højisoleret tag af sandwichpaneler. 120mm PIR plader vejer det samme pr. kvadratmeter som de gamle eternitplader og isolerer bedre end 200mm mineraluld! Hermed slipper man for at eftervise at konstruktionen kan bære det nye tag. Hvis man derimod vil bruge paneler med mineraluld, er vægten (med tilsvarende isoleringsevne) næsten det dobbelte, hvormed det vil være nødvendigt at eftervise om konstruktionen kan bære, hvilket i mange tilfælde vil være et problem. Vores tagpaneler i PIR opfylder heldigvis også langt de fleste almindeligt forekommende brandkrav til tagbeklædning, idet de er certificeret til B-s1,d0 samt Broof (t1), Broof (t2),
+              Broof (t3) og op til REI 30 / RE 60 (gælder tykkelser 100mm og derover).
+            </p>
+          </div>
+          <div class="artikel3 artikel scroll_animation" id="opbygning">
+            <h1 class="about_h1">Opbygning af sandwichpaneler</h1>
+            <h3>Den isolerede kerne</h3>
+            <p>Nedenfor er en kort beskrivelse af de mest almindelige kernematerialer (også typer, vi ikke forhandler):</p>
+            <p>
+              <span>EPS</span>
+              <br /> EPS står for ”Ekspanderet Polystyren”. Det svarer til hvad mange kender som ”Flamingo” eller fra firmaer som Sundolitt eller Jackon. Materialet har ret gode isoleringsegenskaber og styrke, men brandegenskaberne er meget dårlige og plader med EPS-kerne vil ikke kunne godkendes til byggeri i Danmark. Vi forhandler ikke plader med EPS-kerne. <br /><span>PUR</span><br />PUR står for Polyurethan, som er et meget anvendt materiale i sandwichpaneler. Isoleringsegenskaberne er langt bedre end EPS og mineraluld. PUR er ikke nær så brandfarligt som EPS, men de fleste sandwichpaneler med PUR kerne kan alligevel ikke opnå de kævede brandegenskaber. Derfor forhandler vi normalt ikke paneler med PUR-kerne. <br />
+              <span>PIR</span><br />PIR står i denne forbindelse for ” Polyisocyanurat”. PIR minder meget om PUR, men har endnu bedre brandegenskaber: Det kan ikke antændes og nærer ikke en brand, men forkuller. Det afgiver ingen brændende dråber og der er kun meget lidt røgdannelse. Se evt den lille demo-video, vi selv har optaget. PIR har ekstremt gode isoleringsegenskaber, hvormed samme isolering opnås med den halve tykkelse af mineraluld. PIR giver dog ikke samme brandsikkerhed som en kerne i mineraluld. <br />
+              <span>Mineraluld</span><br /> Mineraluld fremstilles ved at smelte sten ved meget høje temperaturer på omkring 1600 °C. Ved indblæsning af luft i den smeltede sten spinnes fine fibre, som giver et stort volumen inden det størkner. Mineraluld har en dårligere isoleringsevne end PIR, det er betydeligt tungere og det kan optage fugt. Men hvis der er meget høje krav til brandsikkerhed er sandwichpaneler med mineraluld den bedste løsning.
+            </p>
+            <h3>Metalplade på inder- og yderside</h3>
+            <p>Alle vores sandwichpaneler er opbygget med galvaniseret og lakeret stålplade på yder- og inderside. Tykkelsen på inder- og yderplade tilpasses krav til styrke. Langt de fleste af de paneler vi sælger, er produceret med 0,5mm plade på begge sider. Man kan spare lidt ved at nøjes med 0,4mm, men så bliver de meget nemt bulede ved montage og dagligt brug. Omvendt kan pladerne udføres med 0,6 eller 0,7mm plade på inderside og/eller yderside hvis der er skærpede krav til styrke.</p>
+          </div>
+          <!-- <div class="artikel4 artikel scroll_animation_2">
           <h1 class="about_h1">LOREM IPSUM</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta.</p>
-        </div>
-        <div class="artikel3 artikel scroll_animation">
-          <h1 class="about_h1">LOREM IPSUM</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta.</p>
-        </div>
-        <div class="artikel4 artikel scroll_animation_2">
-          <h1 class="about_h1">LOREM IPSUM</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia pariatur cupiditate eaque reiciendis dolor culpa alias earum, doloribus natus maxime. Quibusdam ex rerum velit! Exercitationem rerum reprehenderit debitis dicta.</p>
+        </div> -->
         </div>
       </div>
     </main>
-    <Footer />
-    <script src="../js/scrolleffect.js"></script>
   </body>
+  <Footer />
+  <script src="../js/scrolleffect.js"></script>
 </html>
 
 <style>
-  main {
-    max-width: 1200px;
-    margin: auto;
-    padding: 1.5rem;
+  #hero {
+    background-image: url("/20.JPG");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-attachment: fixed;
   }
 
+  #hero > div {
+    grid-column: 1/2;
+    justify-self: end;
+    align-self: center;
+    color: whitesmoke;
+  }
+  #hero p {
+    max-width: 50ch;
+  }
   #owner_profile {
     border-radius: 5px;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
   }
 
   #owner_profile > div:last-child {
@@ -89,15 +130,20 @@ import Footer from "../components/Footer.astro";
     padding-left: 0;
   }
 
-  #owner_profile h1 {
-    color: black;
-    text-transform: uppercase;
-    font-size: 3.5rem;
-  }
-
   #aria_profile {
     max-width: 900px;
     margin: auto;
+    color: whitesmoke;
+  }
+
+  #aria_profile ul li a {
+    display: block;
+    margin-bottom: 2rem;
+    color: whitesmoke;
+  }
+
+  #aria_profile h2 {
+    margin-bottom: 1rem;
   }
 
   #aria_profile .grid_2-1 {
@@ -124,7 +170,7 @@ import Footer from "../components/Footer.astro";
   }
 
   #aria_profile > div:first-child {
-    background-color: var(--color-two);
+    background-color: var(--color-one);
     padding: 2rem;
   }
   #aria_profile img:first-child {
@@ -140,7 +186,10 @@ import Footer from "../components/Footer.astro";
 
   .artikel {
     color: whitesmoke;
-    padding: 2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  .artikel p {
     line-height: 25px;
     margin-bottom: 2rem;
   }
@@ -150,17 +199,22 @@ import Footer from "../components/Footer.astro";
   }
 
   .artikel1 {
-    background-color: var(--color-one);
+    background-color: var(--color-two);
   }
   .artikel2 {
-    background-color: var(--color-two);
-    text-align: right;
+    background-color: var(--color-one);
   }
+
   .artikel2 h1 {
     text-align: right;
   }
   .artikel3 {
-    background-color: var(--color-one);
+    background-color: var(--color-two);
+  }
+
+  .artikel3 span {
+    font-weight: 900;
+    line-height: 50px;
   }
   .artikel4 {
     background-color: var(--color-two);
@@ -194,28 +248,27 @@ import Footer from "../components/Footer.astro";
       width: 450px;
     }
     #aria_profile > div:first-child {
-      background-color: var(--color-two);
       padding: 4rem;
 
       grid-column: 1/2 span;
       grid-row: 1;
-      box-shadow: 30px 15px 0 var(--color-four);
+      box-shadow: 30px 15px 0 var(--color-three);
     }
 
     .artikel1 {
       grid-column: 1/2;
       grid-row: 1/2;
-      box-shadow: 30px 15px 1px var(--color-three);
+      box-shadow: 30px 15px 1px var(--color-four);
     }
     .artikel2 {
       grid-column: 2/3;
       grid-row: 2/3;
-      box-shadow: -30px 15px 1px var(--color-four);
+      box-shadow: -30px 15px 1px var(--color-three);
     }
     .artikel3 {
       grid-column: 1/2;
       grid-row: 3/4;
-      box-shadow: 30px 15px 1px var(--color-three);
+      box-shadow: 30px 15px 1px var(--color-four);
     }
     .artikel4 {
       grid-column: 2/3;

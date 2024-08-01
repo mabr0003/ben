@@ -6,10 +6,8 @@
   <div id="footer_logo"></div>
   <div>
     <ul class="footer_nav">
-      <li><a href="products_org.html">Organisationer</a></li>
-      <li><a href="products_org.html">Privatarrangementer</a></li>
-      <li><a href="products_org.html">Soloundervisning</a></li>
-      <li><a href="products_org.html">Netkor</a></li>
+      <li><a href="/#owner">Kontakt</a></li>
+      <li><a href="/about">Om</a></li>
     </ul>
     <ul class="socials">
       <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
@@ -18,7 +16,7 @@
     </ul>
   </div>
   <div class="copyright">
-    <p>© Aria. All rights reserved.</p>
+    <p>© Sandwichpaneler.dk. All rights reserved.</p>
     <div class="made_by"><p>Designed and made by PureWeb.dk</p> <img src="/globussort.svg" alt="pureweb" /></div>
   </div>
 </footer>
@@ -34,7 +32,7 @@
   }
 
   #footer_logo {
-    background-image: url("/globussort.svg");
+    background-image: url("/splogomobil1.svg");
     background-size: 100%;
     aspect-ratio: 1 / 1;
     width: 75px;
@@ -84,5 +82,15 @@
     font-size: 0.5rem;
     text-align: center;
     margin-top: 1rem;
+  }
+
+  .footer_nav li:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 800px) {
+    .footer_nav li:hover {
+      text-decoration: none;
+    }
   }
 </style>
