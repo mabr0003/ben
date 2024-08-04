@@ -78,10 +78,10 @@ import Footer from "../components/Footer.astro";
         <div id="owner" class="grid_1-1">
           <img src="/16.JPG" alt="dummy" class="order" />
           <div>
-            <h2>KONTAKT HER!</h2>
+            <h2>KONTAKT!</h2>
             <ul>
               <li><p>Telefon:</p><a href="tel:+45 40 27 08 97"><p>+45 40 27 08 97</p></a></li>
-              <li><p>Email:</p> <a href="mailto:benbarkerdk@gmail.com"><p>benbarkerdk@gmail.com</p></a></li>
+              <li><p>Email:</p> <a href="mailto:info@sandwichpaneler.dk"><p>info@sandwichpaneler.dk</p></a></li>
             </ul>
             <a href="about.html" class="btn btn_owner"> Læs mere </a>
           </div>
@@ -108,6 +108,18 @@ import Footer from "../components/Footer.astro";
       grid-column: 1/3;
       grid-row: 1/3;
       height: 100vh;
+    }
+
+    @media (max-width: 800px) {
+      #hero video {
+        display: none;
+      }
+
+      #hero {
+        background-image: url("/heromobil.png");
+        background-position: 50%;
+        background-size: cover;
+      }
     }
 
     .hero_items {

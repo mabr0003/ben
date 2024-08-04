@@ -28,3 +28,22 @@
     transform: translateX(0);
   }
 }
+
+@media (max-width: 800px) {
+  @keyframes scoot_in_kf {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes scoot_in2_kf {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

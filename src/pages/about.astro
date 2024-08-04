@@ -34,7 +34,7 @@ import Footer from "../components/Footer.astro";
       <LogoBar />
       <div class="max_width">
         <div id="owner_profile" class="grid_1-1">
-          <div><img src="/0.png" alt="" /></div>
+          <div><img src="/3.JPG" alt="" /></div>
           <div>
             <h2>ORDRERPROCES</h2>
             <p>Ring på nedenstående nummer - eller endnu bedre send en mail med en kort beskrivelse af det projekt, du overvejer at bruge sandwichpaneler til. Hvis du har en eksisterende hal som du overvejer at give nye vægge og/eller tag er det bedst med nogle tegninger, men hvis bare vi får en adresse kan vi ofte finde information fra luftfoto og det lokale byggesagsarkiv. Billeder kan også være en stor hjælp.</p>
@@ -42,10 +42,10 @@ import Footer from "../components/Footer.astro";
         </div>
         <div id="aria_profile" class="grid_4-1-2">
           <div>
-            <h2>KONTAKT HER!</h2>
+            <h2>KONTAKT!</h2>
             <ul>
               <li><p>Telefon:</p><a href="tel:+45 40 27 08 97"><p>+45 40 27 08 97</p></a></li>
-              <li><p>Email:</p> <a href="mailto:benbarkerdk@gmail.com"><p>benbarkerdk@gmail.com</p></a></li>
+              <li><p>Email:</p> <a href="mailto:info@sandwichpaneler.dk"><p>info@sandwichpaneler.dk</p></a></li>
             </ul>
           </div>
           <div>
@@ -70,9 +70,9 @@ import Footer from "../components/Footer.astro";
           <div class="artikel2 artikel scroll_animation_2" id="mineraluld">
             <h1 class="about_h1">PIR eller Mineraluld</h1>
             <p>
-              Sandwichpaneler med kerne af mineraluld Generelt er vores sandwichpaneler med kerne af mineraluld klassificeret som A2-s1, d0 (”ubrændbart”) samt ”EI-60” eller bedre, og dermed opfylder langt de fleste almindeligt forekommende brandkrav til både tag og ydervægge i alle bygningstyper. Nogle paneler har en ringere klassifikation for tykkelser under 150mm, men vi anbefaler under alle omstændigheder at man vælger en kernetykkelse på mindst 150mm af hensyn til isoleringsværdien. Sandwichpaneler med kerne af PIR Vi fører kun PIR-paneler som er certificeret som B-s1, d0, hvilket svarer til den tidligere danske ”klasse A”, som er den næsthøjest opnåelige brandklasse. Ofte er sandwichpaneler med kerne i PIR mere attraktive and mineraluld fordi de er billigere, isolerer meget bedre og
-              vejer mindre. Det med vægten kan eksempelvis være afgørende hvis man på en eksisterende hal vil udskifte et gammelt eternittag med et nyt, højisoleret tag af sandwichpaneler. 120mm PIR plader vejer det samme pr. kvadratmeter som de gamle eternitplader og isolerer bedre end 200mm mineraluld! Hermed slipper man for at eftervise at konstruktionen kan bære det nye tag. Hvis man derimod vil bruge paneler med mineraluld, er vægten (med tilsvarende isoleringsevne) næsten det dobbelte, hvormed det vil være nødvendigt at eftervise om konstruktionen kan bære, hvilket i mange tilfælde vil være et problem. Vores tagpaneler i PIR opfylder heldigvis også langt de fleste almindeligt forekommende brandkrav til tagbeklædning, idet de er certificeret til B-s1,d0 samt Broof (t1), Broof (t2),
-              Broof (t3) og op til REI 30 / RE 60 (gælder tykkelser 100mm og derover).
+              Sandwichpaneler med kerne af mineraluld: <br /> Generelt er vores sandwichpaneler med kerne af mineraluld klassificeret som A2-s1, d0 (”ubrændbart”) samt ”EI-60” eller bedre, og dermed opfylder langt de fleste almindeligt forekommende brandkrav til både tag og ydervægge i alle bygningstyper. Nogle paneler har en ringere klassifikation for tykkelser under 150mm, men vi anbefaler under alle omstændigheder at man vælger en kernetykkelse på mindst 150mm af hensyn til isoleringsværdien. <br /> Sandwichpaneler med kerne af PIR Vi fører kun PIR-paneler som er certificeret som B-s1, d0, hvilket svarer til den tidligere danske ”klasse A”, som er den næsthøjest opnåelige brandklasse. Ofte er sandwichpaneler med kerne i PIR mere attraktive and mineraluld fordi de er billigere, isolerer meget
+              bedre og vejer mindre. Det med vægten kan eksempelvis være afgørende hvis man på en eksisterende hal vil udskifte et gammelt eternittag med et nyt, højisoleret tag af sandwichpaneler. 120mm PIR plader vejer det samme pr. kvadratmeter som de gamle eternitplader og isolerer bedre end 200mm mineraluld! Hermed slipper man for at eftervise at konstruktionen kan bære det nye tag. Hvis man derimod vil bruge paneler med mineraluld, er vægten (med tilsvarende isoleringsevne) næsten det dobbelte, hvormed det vil være nødvendigt at eftervise om konstruktionen kan bære, hvilket i mange tilfælde vil være et problem. Vores tagpaneler i PIR opfylder heldigvis også langt de fleste almindeligt forekommende brandkrav til tagbeklædning, idet de er certificeret til B-s1,d0 samt Broof (t1), Broof
+              (t2), Broof (t3) og op til REI 30 / RE 60 (gælder tykkelser 100mm og derover).
             </p>
           </div>
           <div class="artikel3 artikel scroll_animation" id="opbygning">
@@ -102,7 +102,7 @@ import Footer from "../components/Footer.astro";
 
 <style>
   #hero {
-    background-image: url("/20.JPG");
+    background-image: url("/11.JPG");
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -112,10 +112,19 @@ import Footer from "../components/Footer.astro";
   }
 
   #hero > div {
-    grid-column: 1/2;
+    grid-column: 2/3;
     justify-self: end;
     align-self: center;
     color: whitesmoke;
+  }
+
+  @media (max-width: 800px) {
+    #hero > div {
+      grid-column: 1/2;
+      justify-self: end;
+      align-self: center;
+      color: black;
+    }
   }
   #hero p {
     max-width: 50ch;
