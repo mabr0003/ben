@@ -111,6 +111,12 @@ import Footer from "../components/Footer.astro";
     background-attachment: fixed;
   }
 
+  @media (max-width: 800px) {
+    #hero {
+      background-position: 30%;
+    }
+  }
+
   #hero > div {
     grid-column: 2/3;
     justify-self: end;
