@@ -26,6 +26,7 @@ import Footer from "../components/Footer.astro";
     </header>
     <main>
       <div id="hero">
+        <img src="/11.avif" alt="hus" />
         <div>
           <h1>Læs mere om sandwichpaneler her!</h1>
           <p>Sandwichpaneler findes som væg og tag-elementer i mange forskellige typer og farver.</p>
@@ -102,23 +103,25 @@ import Footer from "../components/Footer.astro";
 
 <style>
   #hero {
-    background-image: url("/11.avif");
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     background-attachment: fixed;
-  }
+    overflow: hidden;
 
-  @media (max-width: 800px) {
-    #hero {
-      background-image: url("/11nymini.avif");
+    img {
+      grid-column: 1/3;
+      grid-row: 1/4;
+      height: 100%;
     }
   }
 
   #hero > div {
     grid-column: 2/3;
+    grid-row: 2/3;
     justify-self: end;
     align-self: center;
     color: whitesmoke;
@@ -130,6 +133,7 @@ import Footer from "../components/Footer.astro";
       justify-self: end;
       align-self: center;
       color: black;
+      padding-left: 20px;
     }
   }
   #hero p {

@@ -97,6 +97,7 @@
 
     #mobile_nav {
       display: block;
+      z-index: 3000;
     }
 
     #mobile_nav.active .line {
@@ -124,22 +125,24 @@
     }
 
     nav.active .desktop_nav {
-      display: block;
-      background-color: #fff;
-      position: absolute;
-      top: 75px;
-      right: 0;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      z-index: 1;
-      padding: 1rem;
-      border-radius: 5px;
-      min-width: 280px;
-      transition: 0.5s linear;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #fff; /* Background color for the mobile menu */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      padding: 0;
     }
 
-    nav.active .desktop_nav li {
+    nav.active .desktop_nav li a {
       border-bottom: 1px solid var(--sub-color);
       padding: 0.5rem 0;
+      font-size: 2rem;
     }
 
     nav.active .desktop_nav li:first-child {
@@ -160,15 +163,16 @@
 <script>
   const burger = document.querySelector("#mobile_nav");
   const nav = document.querySelector("nav");
-  const dropdown = document.querySelector(".dropdown");
+
+  const kontakt = document.querySelector(".btn_nav");
 
   burger.addEventListener("click", () => {
     burger.classList.toggle("active");
     nav.classList.toggle("active");
-    dropdown.classList.remove("active");
   });
 
-  dropdown.addEventListener("click", () => {
-    dropdown.classList.toggle("active");
+  kontakt.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
   });
 </script>
